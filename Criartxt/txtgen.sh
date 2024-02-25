@@ -7,17 +7,17 @@ if [ "$(basename "$PWD")" != "samples" ]; then
     exit 1
 fi
 
-pasta="$currentdir"
+pasta="script_sample_folder"
 
 
 
 
-for FILE in "$pasta"*/; do
+for FILE in "$pasta"/*/; do
     
         name=$(basename "$FILE")
-        touch "${FILE}${name}.txt"
-        echo "${name}" > "${FILE}"
+        touch "${pasta}/${name}/${name}.txt"
+        echo "${name}" > "${pasta}/${name}/${name}.txt"
 
 done
 
-# echo "Sucess: txt files creates sucessfully"
+echo "Success: txt files creates successfully"
